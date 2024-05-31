@@ -1,7 +1,7 @@
 # Quiz-Game-Cpp-CLI
 Source code is not available right now. It will be available on 30th May, 2024 (30/05/2024).
 
-Documentation: https://MIbnEKhalid.github.io/Quiz-Game-Cpp-CLI/
+Documentation: https://MIbnEKhalid.github.io/Quiz-Game-Cpp-CLI/ or https://mbktechstudio.com/Quiz-Game-Cpp-CLI/
 Source Code: https://github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI/Code/
 
 # Project Description:

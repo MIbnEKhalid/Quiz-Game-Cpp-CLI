@@ -18,3 +18,11 @@ This quiz game serves as a comprehensive demonstration of fundamental C++ concep
 # Purpose:
 
 The primary purpose of this project is to demonstrate how basic C++ concepts can be effectively utilized to develop a fully functional quiz game. By exploring the codebase, learners can gain insights into how to structure and implement a project in C++, reinforcing their understanding of the language's core principles.
+
+## License
+
+This project is licensed under the WTFPL - see the [LICENSE](LICENSE) file for details.
+ 
+## Contact
+
+For questions or contributions, please contact Muhammad Bin Khalid at [mbktechstudio.com/Support](https://mbktechstudio.com/Support/?Project=Quiz-Game-Cpp-CLI), [support@mbktechstudio.com](mailto:support@mbktechstudio.com) or [chmuhammadbinkhalid28.com](mailto:chmuhammadbinkhalid28.com).

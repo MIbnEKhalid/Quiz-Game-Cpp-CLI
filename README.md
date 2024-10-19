@@ -21,7 +21,7 @@ The primary purpose of this project is to demonstrate how basic C++ concepts can
 
 ## License
 
-This project is licensed under the WTFPL - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details.
  
 ## Contact
 

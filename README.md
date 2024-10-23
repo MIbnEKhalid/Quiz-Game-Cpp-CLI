@@ -7,9 +7,7 @@ Source Code: [github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI](https://github.com/MIbnE
 
 # Requirement
 
-While **99.99%** of the code works with **C++11**, there is one function that requires **C++17** to operate properly. Specifically, this function deals with creating directories using the **`<filesystem>`** library, which is only available in **C++17** and latter versions.
-
-If you're using **C++11**, you can simply remove the code related to folder creation and manually create a folder named **`UserHistoryData`**. The rest of the program will function without issues on **C++11**.
+While **99.99%** of the code works with **C++11**, one function requires **C++17** for directory creation using the **`<filesystem>`** library. If using **C++11**, remove the folder creation code and manually create a **`UserHistoryData`** folder. The rest of the program will run without issues on **C++11**.
 
 # Project Description:
 

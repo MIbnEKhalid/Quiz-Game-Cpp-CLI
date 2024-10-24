@@ -19,10 +19,6 @@ Source Code: [github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI](https://github.com/MIbnE
 
 While **99.99%** of the code works with **C++11**, one function requires **C++17** for directory creation using the **`<filesystem>`** library. If using **C++11**, remove the folder creation code and manually create a **`UserHistoryData`** folder. The rest of the program will run without issues on **C++11**.
 
-# Project Description:
-
-This quiz game serves as a comprehensive demonstration of fundamental C++ concepts applied in real-world software development. It showcases the utilization of concepts such as classes, arrays, functions, loops, conditionals, string manipulation, file handling, and more, to create an interactive quiz experience
-
 # Purpose:
 
 The primary purpose of this project is to demonstrate how basic C++ concepts can be effectively utilized to develop a fully functional quiz game. By exploring the codebase, learners can gain insights into how to structure and implement a project in C++, reinforcing their understanding of the language's core principles.

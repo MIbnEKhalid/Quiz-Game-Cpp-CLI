@@ -5,6 +5,8 @@ Documentation: [docs.mbktechstudio.com/Quiz-Game-Cpp-CLI](https://docs.mbktechst
 
 Source Code: [github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI](https://github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI)
 
+---
+
 ## Versions
 - **v1-Core** (better for understanding code): This folder contains the simplest implementation of the quiz game, focusing on core C++ concepts without any advanced features. It serves as a foundational version for understanding the basic structure and functionality of a quiz game.
 
@@ -19,14 +21,18 @@ Source Code: [github.com/MIbnEKhalid/Quiz-Game-Cpp-CLI](https://github.com/MIbnE
 
 While **99.99%** of the code works with **C++11**, one function requires **C++17** for directory creation using the **`<filesystem>`** library. If using **C++11**, remove the folder creation code and manually create a **`UserHistoryData`** folder. The rest of the program will run without issues on **C++11**.
 
+---
+
 # Purpose:
 
 The primary purpose of this project is to demonstrate how basic C++ concepts can be effectively utilized to develop a fully functional quiz game. By exploring the codebase, learners can gain insights into how to structure and implement a project in C++, reinforcing their understanding of the language's core principles.
+
+---
 
 ## License
 
 This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details.
  
-## Contact
+## Contact & Support
 
 For questions or contributions, please contact Muhammad Bin Khalid at [mbktechstudio.com/Support](https://mbktechstudio.com/Support/?Project=Quiz-Game-Cpp-CLI), [support@mbktechstudio.com](mailto:support@mbktechstudio.com) or [chmuhammadbinkhalid28.com](mailto:chmuhammadbinkhalid28.com).

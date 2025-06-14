@@ -1,0 +1,72 @@
+
+-------------------------------------------
+
+
+
+			User Name: test
+
+Question 1: What is the output of the following code: std::cout << 1 + 1; ?
+A: 1
+B: 2
+C: 11
+D: 3
+
+User Answer: A
+Correct Answer: B
+
+
+Question 2: Which of the following is the boolean data type in C++?
+A: bool
+B: boolean
+C: int
+D: float
+
+User Answer: A
+Correct Answer: A
+
+
+Question 3: Which of the following is used to declare a variable in C++?
+A: int
+B: float
+C: double
+D: All of the above
+
+User Answer: A
+Correct Answer: D
+
+
+Question 4: Which of the following is a correct comment in C++?
+A: // This is a comment
+B: /* This is a comment */
+C: Both A and B
+D: None of the above
+
+User Answer: A
+Correct Answer: C
+
+
+Question 5: What is the correct syntax to output 'Hello World' in C++?
+A: cout << 'Hello World';
+B: std::cout << 'Hello World';
+C: std::cout << "Hello World";
+D: printf('Hello World');
+
+User Answer: A
+Correct Answer: C
+
+
+
+		 test Result 
+
+Time Elapsed: 6 Seconds
+Score: 3
+Score Percentage: 20%
+Correct Answer: 1
+Wrong Answer: 4
+Percentage Correct: 20%
+Result Status: Fail
+
+-------------------------------------------
+
+
+

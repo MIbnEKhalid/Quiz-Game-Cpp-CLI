@@ -671,7 +671,7 @@ public:
         CentredMessage("\nProgrammed End\n\n\n");
         rlines("=");
         CentredMessage("\nDeveloped by:                ");
-        CentredMessage("                  Muhammad Ibin E Khalid\n\n");
+        CentredMessage("                  Muhammad Bin Khalid\n\n");
         rlines("-");
         CentredMessage("\nSource Code: https://s.mbktechstudio.com/C7-tqhC4");
         rlines("=");

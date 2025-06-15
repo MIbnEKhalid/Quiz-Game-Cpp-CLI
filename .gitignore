@@ -1,1 +1,19 @@
 /UserHistoryData/*
+# Dev-C++ build outputs
+#*.exe
+*.dll
+*.o
+*.obj
+*.gch
+*.pch
+*.ilk
+*.pdb
+
+# Dev-C++ project artefacts
+*.dep
+*.layout
+*.bsc
+*.tag
+*.bak
+*.log
+*.tmp

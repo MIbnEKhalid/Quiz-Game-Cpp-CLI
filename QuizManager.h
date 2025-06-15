@@ -408,28 +408,21 @@ public:
 
     void DisplayQuizInstruction()
     {
-
         system("pause");
         clearScreen();
 
-        cout << "Total Questions: " << Total_Questions << endl;
-        cout << "Number of Questions to Ask: " << NumberOfQuestionsToAsk << endl;
-        cout << "Score Per Question: " << Score_Per_Question << endl;
-        cout << "Total Score: " << Total_Score << endl;
-
-        CentredMessage("_________________________________________");
-        CentredMessage("|                                        |.");
-        CentredMessage("|              Instruction               |.");
-        CentredMessage("|________________________________________|.");
-        CentredMessage("|                                        |.");
-        CentredMessage("|  =>  Each question contain " + to_string(Score_Per_Question) + " Points.   |.");
-        CentredMessage("|  =>  Total Questions = 25              |.");
-        CentredMessage("|  =>  Total Scrore = 25 x 3 = 75        |.");
-        CentredMessage("|  =>  Only inputs A to D are valid.     |.");
-        CentredMessage("|  =>  Typing \"exit\" returns you to    |.");
-        CentredMessage("|                the main menu.          |.");
-        CentredMessage("|  =>  Typing \"quit\" ends the program. |.");
-        CentredMessage("|________________________________________|.");
+        rlines("_");
+        CentredMessage("                                        ");
+        CentredMessage("              Instruction               ");
+        CentredMessage("                                        ");
+        CentredMessage("  =>  Each question contain " + to_string(Score_Per_Question) + " Points.   ");
+        CentredMessage("  =>  Total Questions = " + to_string(Total_Questions) + "              ");
+        CentredMessage("  =>  Total Scrore = " + to_string(Total_Questions) + " x " + to_string(Score_Per_Question) + " = " + to_string(Total_Score) + "        ");
+        CentredMessage("  =>  Only inputs A to D are valid.     ");
+        CentredMessage("  =>  Typing \"exit\" returns you to      ");
+        CentredMessage("                the main menu.          ");
+        CentredMessage("  =>  Typing \"quit\" ends the program.   ");
+        rlines("-");
 
         system("pause");
         clearScreen();
@@ -573,7 +566,6 @@ public:
         SetColor(CYAN);
         CentredMessage("Purpose:\n\n");
         cout << "The primary purpose of this project is to demonstrate how basic C++ concepts can be effectively utilized to develop a fully functional quiz game. By exploring the codebase, learners can gain insights into how to structure and implement a project in C++, reinforcing their understanding of the language's core principles.\n\n";
-
 
         SetColor(MAGENTA);
         CentredMessage("Development:\n\n");

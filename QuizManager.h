@@ -39,8 +39,8 @@ class QuizManager
 private:
     // Member variables
 
-    const static int Total_Questions = 5; // Total Questions You Have to Set This According to Questions in Given In .CSV file
-    const static int Total_Options = 4;   // TOtal Options Per Question
+    const static int Total_Questions = 15; // Total Questions You Have to Set This According to Questions in Given In .CSV file
+    const static int Total_Options = 4;    // TOtal Options Per Question
 
     // Array to store the questions
     string Question[Total_Questions];
@@ -97,20 +97,65 @@ public:
 
     void LoadQuestions()
     {
-        Question[0] = "What is the output of the following code: std::cout << 1 + 1; ?";
-        initializeOptions(0, "A: 1", "B: 2", "C: 11", "D: 3", 'B');
+        iQuestionNOptions(0, "What is the output of the following code: std::cout << 1 + 1; ?",
+                          "A: 1", "B: 2", "C: 11", "D: 3",
+                          'B');
 
-        Question[1] = "Which of the following is a correct comment in C++?";
-        initializeOptions(1, "A: // This is a comment", "B: /* This is a comment */", "C: Both A and B", "D: None of the above", 'C');
+        iQuestionNOptions(1, "Which of the following is a correct comment in C++?",
+                          "A: // This is a comment", "B: /* This is a comment */", "C: Both A and B", "D: None of the above",
+                          'C');
 
-        Question[2] = "Which of the following is used to declare a variable in C++?";
-        initializeOptions(2, "A: int", "B: float", "C: double", "D: All of the above", 'D');
+        iQuestionNOptions(2, "Which of the following is used to declare a variable in C++?",
+                          "A: int", "B: float", "C: double", "D: All of the above",
+                          'D');
 
-        Question[3] = "What is the correct syntax to output 'Hello World' in C++?";
-        initializeOptions(3, "A: cout << 'Hello World';", "B: std::cout << 'Hello World';", "C: std::cout << \"Hello World\";", "D: printf('Hello World');", 'C');
+        iQuestionNOptions(3, "What is the correct syntax to output 'Hello World' in C++?",
+                          "A: cout << 'Hello World';", "B: std::cout << 'Hello World';", "C: std::cout << \"Hello World\";", "D: printf('Hello World');",
+                          'C');
 
-        Question[4] = "Which of the following is the boolean data type in C++?";
-        initializeOptions(4, "A: bool", "B: boolean", "C: int", "D: float", 'A');
+        iQuestionNOptions(4, "Which of the following is the boolean data type in C++?",
+                          "A: bool", "B: boolean", "C: int", "D: float",
+                          'A');
+
+        iQuestionNOptions(5, "What is the correct way to include the iostream library in C++?",
+                          "A: #include <iostream>", "B: #include 'iostream'", "C: #include <iostream.h>", "D: #include <stdio.h>",
+                          'A');
+
+        iQuestionNOptions(6, "Which operator is used to assign a value to a variable in C++?",
+                          "A: =", "B: ==", "C: :=", "D: ->",
+                          'A');
+
+        iQuestionNOptions(7, "What is the correct way to declare a constant integer in C++?",
+                          "A: const int x = 5;", "B: int const x = 5;", "C: #define x 5", "D: Both A and B",
+                          'D');
+
+        iQuestionNOptions(8, "Which loop is guaranteed to execute at least once in C++?",
+                          "A: for loop", "B: while loop", "C: do-while loop", "D: if-else",
+                          'C');
+
+        iQuestionNOptions(9, "What is the output of: cout << (5 > 3); ?",
+                          "A: 5", "B: 3", "C: 1 (true)", "D: 0 (false)",
+                          'C');
+
+        iQuestionNOptions(10, "Which of the following is NOT a valid C++ variable name?",
+                          "A: myVar", "B: _myVar", "C: 123var", "D: var123",
+                          'C');
+
+        iQuestionNOptions(11, "What is the correct way to read user input in C++?",
+                          "A: cin >> x;", "B: scanf(\"%d\", &x);", "C: input(x);", "D: read(x);",
+                          'A');
+
+        iQuestionNOptions(12, "Which header file is needed to use the 'string' data type in C++?",
+                          "A: <string>", "B: <string.h>", "C: <cstring>", "D: <str>",
+                          'A');
+
+        iQuestionNOptions(13, "What is the correct way to compare two strings in C++?",
+                          "A: str1 == str2", "B: strcmp(str1, str2)", "C: str1.equals(str2)", "D: Both A and B",
+                          'A');
+
+        iQuestionNOptions(14, "What does the '++' operator do in C++?",
+                          "A: Adds 1 to a variable", "B: Concatenates strings", "C: Multiplies by 2", "D: Checks equality",
+                          'A');
     }
 
     // This function initializes the options for a given question and stores the correct answer.
@@ -122,9 +167,10 @@ public:
     //   - optionD: The text for the fourth option of the question
     //   - CorrectAnswerI: The correct option (A, B, C, or D) for the question
 
-    void initializeOptions(int questionIndex, string optionA, string optionB, string optionC, string optionD, char CorrectAnswerI)
+    void iQuestionNOptions(int questionIndex, string question, string optionA, string optionB, string optionC, string optionD, char CorrectAnswerI)
     {
         // Set the options and correct answer for the specified question
+        Question[questionIndex] = question;
         Option[questionIndex][0] = optionA;
         Option[questionIndex][1] = optionB;
         Option[questionIndex][2] = optionC;
@@ -190,7 +236,7 @@ public:
         SetColor(CYAN);
 
         // Display the question number and the question itself
-        cout << "Question " << Qno << ": " << to_uppercase(User_Name) << ", " << Question[questionIndex] << endl
+        cout << "Question " << Qno << "/" << NumberOfQuestionsToAsk << ": " << to_uppercase(User_Name) << ", " << Question[questionIndex] << endl
              << endl;
 
         for (int i = 0; i < Total_Options; ++i)
@@ -416,8 +462,8 @@ public:
         CentredMessage("              Instruction               ");
         CentredMessage("                                        ");
         CentredMessage("  =>  Each question contain " + to_string(Score_Per_Question) + " Points.   ");
-        CentredMessage("  =>  Total Questions = " + to_string(Total_Questions) + "              ");
-        CentredMessage("  =>  Total Scrore = " + to_string(Total_Questions) + " x " + to_string(Score_Per_Question) + " = " + to_string(Total_Score) + "        ");
+        CentredMessage("  =>  Total Questions = " + to_string(NumberOfQuestionsToAsk) + "              ");
+        CentredMessage("  =>  Total Scrore = " + to_string(NumberOfQuestionsToAsk) + " x " + to_string(Score_Per_Question) + " = " + to_string(Total_Score) + "        ");
         CentredMessage("  =>  Only inputs A to D are valid.     ");
         CentredMessage("  =>  Typing \"exit\" returns you to      ");
         CentredMessage("                the main menu.          ");

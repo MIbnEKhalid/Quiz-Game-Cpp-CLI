@@ -255,7 +255,7 @@ public:
             cout << "Enter your answer: ";
             cin >> userAnswer;
 
-            if (userAnswer == "exit")
+            if (userAnswer == "exit" || userAnswer == "back" )
             {
                 SetZero();
                 clearScreen();
@@ -370,7 +370,7 @@ public:
     {
         clearScreen(); // Clear the console
 
-        cout << "User name can only contain lowercase letters (a–z), digits (0–9), and underscores (_).\n";
+        cout << "User name can only contain lowercase letters (a-z).\n";
         cout << "Enter User Name: ";
 
         string userInput;
@@ -379,13 +379,14 @@ public:
         while (!validInput)
         {
             getline(cin >> ws, userInput);
-
-            if (userInput.empty() || userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyz0123456789_") != string::npos)
+            
+            to_lowercase(userInput);
+            if (userInput.empty() || userInput.find_first_not_of("abcdefghijklmnopqrstuvwxyz") != string::npos)
             {
-                // Check if the input is empty or contains invalid characters for file names
                 SetColor(YELLOW);
-                cout << "Invalid input. Only lower Case and numbers are allowed.\nPlease enter a valid User Name: ";
+                cout << "Invalid input. Usernames can only contain lowercase (a-z).\nPlease enter a valid User Name: ";
                 SetColor(CYAN);
+                validInput = false;
             }
             else if (IfFileExists(userInput))
             {
@@ -394,7 +395,7 @@ public:
                 while (!validChoice)
                 {
                     SetColor(13);
-                    cout << "User Already Exists.\nDo you want to save data in the same file? Previous Data will not be removed (y/n): ";
+                    cout << "User Already Exists.\nDo you want to save data in the same file? (y/n): ";
                     SetColor(CYAN);
                     cin >> choice;
                     if (choice == 'y' || choice == 'Y')
@@ -413,17 +414,13 @@ public:
                         cout << "Invalid choice. Please enter 'y' for yes or 'n' for no." << endl;
                         SetColor(CYAN);
                     }
-                    // Clear the input buffer to prevent any additional characters from interfering with the next input
-                    cin.clear();
-#pragma push_macro("max")
-#undef max
+                    // Clear the input buffer
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-#pragma pop_macro("max")
                 }
             }
             else
             {
-                // If the input is valid and the file doesn't exist, set validInput to true and exit the loop
+                // If the input is valid and the file doesn't exist, exit the loop
                 validInput = true;
             }
         }
@@ -728,6 +725,13 @@ public:
         std::transform(result.begin(), result.end(), result.begin(), ::toupper);
         return result;
     }
+    
+    std::string to_lowercase(const std::string &str)
+	{
+	    std::string result = str;
+	    std::transform(result.begin(), result.end(), result.begin(), ::tolower);
+	    return result;
+	}
 
     bool IfFileExists(const string &filename)
     {

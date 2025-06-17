@@ -1,5 +1,3 @@
-#pragma region Libaries&Define
-
 #include <iostream>
 #include <windows.h>
 #include <sys/stat.h>
@@ -27,18 +25,13 @@
 using namespace std;
 using namespace std::chrono;
 
-#pragma endregion
-
-const int NumberOfQuestionsToAsk = 5; // Number of questions to be asked
 
 class QuizManager
 {
 
-#pragma region Data_Members
-
 private:
     // Member variables
-
+    const int NumberOfQuestionsToAsk = 5; // Number of questions to be asked
     const static int Total_Questions = 15; // Total Questions You Have to Set This According to Questions in Given In .CSV file
     const static int Total_Options = 4;    // TOtal Options Per Question
 
@@ -72,8 +65,6 @@ private:
     steady_clock::time_point startTime;
     steady_clock::time_point endTime;
 
-#pragma endregion
-
 public:
     QuizManager()
     {
@@ -89,8 +80,6 @@ public:
         CorrectAnswerCount_ = 0;
         WrongAnswerCount_ = 0;
     }
-
-#pragma region Set_Question
 
     // Function to load questions and options.
     // Initializes questions and their corresponding options.
@@ -226,10 +215,6 @@ public:
         }
     }
 
-#pragma endregion
-
-#pragma region Question_Process_Functions
-
     // Presents each question to the user, captures user input, validates answers, and delivers informative feedback.
     void ProcessQuestion(int questionIndex, int Qno)
     {
@@ -360,10 +345,6 @@ public:
             cout << "Unable to open history.txt for writing." << endl;
         }
     }
-
-#pragma endregion
-
-#pragma region Question_Display_Functions
 
     // Initiates the quiz experience by presenting instructions and guiding users through the questions.
     void DisplayQuestions()
@@ -590,10 +571,6 @@ public:
         }
     }
 
-#pragma endregion
-
-#pragma region Main_Functions
-
     // Function to display information about the project
 
     void AboutProject()
@@ -714,10 +691,6 @@ public:
         pause();
         exit(1);
     }
-
-#pragma endregion
-
-#pragma region ToolsFunctions
 
     string to_uppercase(const std::string &str)
     {
@@ -909,5 +882,4 @@ public:
         }
     }
 
-#pragma endregion
 };
